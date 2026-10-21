@@ -1,56 +1,248 @@
-# Team HLD — LinkPulse
+# 🔗 LinkPulse
+### Smart Link Management & Analytics Platform
 
-**Repository:** `team-hld-linkpulse`  
-**Live URL:** https://lnkpulse-dev.vercel.app/  
+**Developed by Team HLD**
 
-## Problem statement
-A link-management platform must do more than map short codes to destinations. It should integrate link creation, redirect rules, click tracking, organization, analytics, QR codes, CSV import, and safety controls.
+A web-based link management platform designed to simplify URL shortening, link organization, redirection management, and performance tracking through a centralized dashboard.
 
-## Solution
-LinkPulse is a Node.js/Express application with a responsive browser interface, SQLite data store, authenticated link management, rule-aware redirects, and click-event reporting.
+---
 
-## Implemented features
-- Register/login, owner-scoped links and admin endpoints
-- Random/custom short aliases, expiry, click caps and password-protected redirects
-- Redirect events with time, referrer, device, browser, hashed visitor and basic bot flag
-- Campaign and tag fields; folders; QR image endpoint; bio pages; device destination overrides
-- Domain blocklist and link disabling; link creation rate limiting
-- Dashboard frontend and analytics endpoints
+## 🌐 Live Project
 
-**Scope / limitations:** Geolocation, team workspaces, background click queue, comprehensive anti-abuse scanning and production-grade bot detection are not implemented. Do not claim these in the demo. This code uses SQLite: do **not** deploy it on ephemeral filesystem hosting and expect durable data. Free static hosting (GitHub Pages) cannot run the backend. A public deployment needs persistent storage, or a database migration.
+**Live Website:** https://lnkpulse-dev.vercel.app/
 
-## Tech stack
-Node.js 20+, Express 4, SQLite (`better-sqlite3`), vanilla HTML/CSS/JavaScript, JWT in HTTP-only cookie, bcryptjs, QRCode, Helmet, express-rate-limit.
+**Project Name:** LinkPulse  
+**Team Name:** Team HLD  
+**Project Type:** Web Application  
+**Submission:** Hackathon Project
 
-## Local setup
+---
+
+## 📌 Problem Statement
+
+Traditional URL shorteners primarily focus on converting long URLs into shorter links. However, modern users require additional capabilities such as link organization, customizable redirects, click tracking, analytics, QR code generation, and security controls.
+
+Managing these functionalities through separate platforms increases complexity and reduces efficiency.
+
+LinkPulse aims to address this problem by bringing essential link-management capabilities together into a unified platform.
+
+## 💡 Our Solution
+
+LinkPulse provides a centralized platform where users can create, manage, organize, and monitor shortened URLs.
+
+The system is designed to offer an intuitive interface alongside backend functionality for authenticated link management, configurable redirection, and click-event tracking.
+
+Our objective is to make link management more accessible, organized, and efficient.
+
+---
+
+## ✨ Project Features
+
+### 1. User Authentication
+- User registration and login.
+- Authenticated access to link-management features.
+- Owner-specific link management.
+
+### 2. URL Shortening
+- Generate shortened URLs.
+- Create custom link aliases.
+- Configure link expiration.
+- Set maximum click limits.
+- Support password-protected redirects.
+
+### 3. Link Management
+- Create and manage shortened links.
+- Organize links using campaigns, tags, and folders.
+- Enable or disable individual links.
+- Configure device-specific destination overrides.
+
+### 4. Analytics and Tracking
+- Record link-click events.
+- Track timestamps and referrer information.
+- Collect basic browser and device information.
+- Provide analytics through dashboard and backend endpoints.
+
+### 5. Additional Capabilities
+- QR code generation.
+- Bio-page functionality.
+- Domain blocklist.
+- Link creation rate limiting.
+- Responsive dashboard interface.
+
+### Project Scope and Limitations
+
+The project focuses on core link-management functionality. Advanced capabilities such as comprehensive geolocation analytics, team workspaces, background click processing, and production-grade bot detection are outside the current implementation scope.
+
+---
+
+## 🛠️ Technology Stack
+
+| Component | Technology |
+|---|---|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | Node.js, Express.js |
+| Database | SQLite |
+| Authentication | JWT, bcryptjs |
+| QR Generation | QRCode |
+| Security | Helmet, Express Rate Limit |
+| Version Control | Git & GitHub |
+
+---
+
+## 📂 Project Architecture
+
+The application follows a frontend-backend architecture.
+
+**Frontend:** Provides the user interface for creating, organizing, and monitoring links.
+
+**Backend:** Handles authentication, URL generation, redirect rules, analytics, and API requests.
+
+**Database:** Stores application records, user information, link configurations, and click events.
+
+**Security Layer:** Implements authentication, password hashing, request limiting, and link-management restrictions.
+
+---
+
+## ⚙️ Installation and Local Setup
+
+### Prerequisites
+
+Ensure the following are installed:
+
+- Node.js 20 or above
+- npm
+- Git
+- Visual Studio Code (recommended)
+
+### Step 1: Clone the Repository
+
 ```bash
-# In extracted project folder
+git clone https://github.com/USERNAME/team-hld-linkpulse.git
+```
+
+Replace `USERNAME` with the actual GitHub account name.
+
+### Step 2: Open the Project
+
+```bash
+cd team-hld-linkpulse
+```
+
+### Step 3: Install Dependencies
+
+```bash
 npm install
-cp .env.example .env  # Windows: copy .env.example .env
-# Configure JWT_SECRET in your shell or via your deployment environment.
-# This app does not automatically load .env files.
+```
+
+### Step 4: Configure Environment Variables
+
+Create a `.env` file using `.env.example` as a reference.
+
+**Important:** The application does not automatically load `.env` files. Configure the required environment variables in your shell or deployment environment.
+
+PowerShell example:
+
+```powershell
+$env:JWT_SECRET="replace-with-a-unique-random-secret-at-least-32-characters"
 npm start
 ```
-Visit `http://localhost:3000`. PowerShell example: `$env:JWT_SECRET="your-unique-long-random-secret-at-least-32-characters"; npm start`. Do not commit your real secrets.
 
-## Deployment
-1. Create public GitHub repo `team-hld-linkpulse`, upload project contents, not the enclosing ZIP.
-2. Choose Node-compatible hosting with persistent storage. `render.yaml` illustrates a persistent-disk setup **which may require a paid plan**; it is not a guaranteed free deployment. For a strict zero-cost deployment, first migrate SQLite to an available durable free-tier database and retest.
-3. Set `NODE_ENV=production`, `JWT_SECRET` (32+ characters), and `DB_PATH` pointing to persistent storage. Install/build using `npm install`, start with `npm start`.
-4. Verify `/health`, signup/login, new alias, redirect and analytics from a second device. Replace the live URL placeholder above.
-5. Never submit localhost. Check hosting quotas and availability before promising zero cost.
+Never upload real credentials or secret keys to GitHub.
 
-## Screenshots
-Add genuine screenshots after running the application; do not use mock screenshots as evidence of a working deployment.
+### Step 5: Run the Application
 
-| Screen | Screenshot |
-| --- | --- |
-| Dashboard | _Add `screenshots/dashboard.png`_ |
-| Create link | _Add `screenshots/create-link.png`_ |
-| Analytics | _Add `screenshots/analytics.png`_ |
+After configuring the environment, start the application:
 
-## Git collaboration
-Each member should clone and commit from their **own** GitHub account. Suggested messages: `feat: add redirect rules`, `docs: add setup and deployment notes`, `test: verify link lifecycle`. Do not fabricate team-member commits.
+```bash
+npm start
+```
 
-## Demo checklist
-Create a link → open it → check recorded click → generate QR → disable link → confirm it stops redirecting. Show a CSV import only if verified in your running build.
+Open your browser and visit:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 🚀 Deployment
+
+The application requires a Node.js-compatible hosting environment.
+
+Because the backend uses SQLite, persistent storage is necessary to preserve application data across deployments and restarts.
+
+GitHub Pages alone cannot host the Node.js backend.
+
+For production deployment, configure the required environment variables, provide persistent database storage, and verify all major application workflows.
+
+The provided `render.yaml` illustrates a possible deployment configuration. Persistent hosting may require a paid plan or database migration depending on the selected provider.
+
+---
+
+## 🔒 Security Considerations
+
+LinkPulse incorporates several security-focused mechanisms:
+
+- Password hashing using bcryptjs.
+- JWT-based authentication using HTTP-only cookies.
+- Request rate limiting.
+- Domain blocklisting.
+- Link disabling and expiration controls.
+- Owner-scoped link management.
+
+These measures provide a foundation for safer link management. Additional security testing and infrastructure improvements would be necessary before large-scale production use.
+
+---
+
+## 🔮 Future Enhancements
+
+The following improvements can be considered for future development:
+
+- Advanced geographical analytics.
+- Collaborative team workspaces.
+- Enhanced bot detection.
+- Background click-event processing.
+- Comprehensive automated URL safety scanning.
+- Improved analytics visualization.
+- Additional integration and customization options.
+
+---
+
+## 🧪 Testing and Demonstration
+
+The core application workflow can be evaluated through the following sequence:
+
+1. Register or log in.
+2. Create a shortened URL.
+3. Open the generated short link.
+4. Verify redirection to the destination.
+5. Review recorded click information.
+6. Generate a QR code.
+7. Disable the link.
+8. Verify that the disabled link no longer redirects.
+
+Features should be demonstrated using the actual running application.
+
+---
+
+## 👥 Team Information
+
+**Team Name:** Team HLD  
+**Project:** LinkPulse  
+**Category:** Web Development / Link Management
+
+The project is developed as part of a hackathon initiative to demonstrate practical web-development skills, problem-solving, backend integration, and application design.
+
+---
+
+## 🎯 Project Objective
+
+Our goal is to develop a practical link-management solution that combines essential URL management features into one accessible platform.
+
+LinkPulse demonstrates how modern web technologies can be integrated to build an organized, functional, and extensible application.
+
+---
+
+**Developed by Team HLD**
+
+*LinkPulse — Simplify Links. Track Performance. Manage Smarter.*
