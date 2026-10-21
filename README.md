@@ -1,248 +1,199 @@
-# 🔗 LinkPulse
-### Smart Link Management & Analytics Platform
+🔗 LinkPulse
 
-**Developed by Team HLD**
+Shorten Smarter. Track Everything.
 
-A web-based link management platform designed to simplify URL shortening, link organization, redirection management, and performance tracking through a centralized dashboard.
+A Smart URL Management & Analytics Platform
 
----
+Developed by Team HLD
 
-## 🌐 Live Project
+🌐 Live Website
 
-**Live Website:** https://lnkpulse-dev.vercel.app/
+Project: LinkPulse
 
-**Project Name:** LinkPulse  
-**Team Name:** Team HLD  
-**Project Type:** Web Application  
-**Submission:** Hackathon Project
+Live Demo: https://lnkpulse-dev.vercel.app/
 
----
+Team: Team HLD
 
-## 📌 Problem Statement
+Category: Web Development
 
-Traditional URL shorteners primarily focus on converting long URLs into shorter links. However, modern users require additional capabilities such as link organization, customizable redirects, click tracking, analytics, QR code generation, and security controls.
+Project Type: Hackathon Submission
 
-Managing these functionalities through separate platforms increases complexity and reduces efficiency.
+📌 Problem Statement
 
-LinkPulse aims to address this problem by bringing essential link-management capabilities together into a unified platform.
+Traditional URL shorteners primarily focus on converting long URLs into shorter ones. However, users and organizations also need an efficient way to manage links, organize campaigns, monitor engagement, and control link accessibility.
 
-## 💡 Our Solution
+Using separate tools for these activities makes link management complicated and time-consuming.
 
-LinkPulse provides a centralized platform where users can create, manage, organize, and monitor shortened URLs.
+LinkPulse aims to simplify this process by bringing essential link-management capabilities together into one centralized platform.
 
-The system is designed to offer an intuitive interface alongside backend functionality for authenticated link management, configurable redirection, and click-event tracking.
+💡 Our Solution
 
-Our objective is to make link management more accessible, organized, and efficient.
+LinkPulse is a web-based URL management platform designed to make link creation, organization, and performance monitoring more convenient.
 
----
+It provides a modern dashboard where users can access link-management tools, organize campaigns, and explore analytics-related functionality through an intuitive interface.
 
-## ✨ Project Features
+Our goal is to make link management smarter, simpler, and more accessible.
 
-### 1. User Authentication
-- User registration and login.
-- Authenticated access to link-management features.
-- Owner-specific link management.
+✨ Key Features
 
-### 2. URL Shortening
-- Generate shortened URLs.
-- Create custom link aliases.
-- Configure link expiration.
-- Set maximum click limits.
-- Support password-protected redirects.
+1. URL Shortening
 
-### 3. Link Management
-- Create and manage shortened links.
-- Organize links using campaigns, tags, and folders.
-- Enable or disable individual links.
-- Configure device-specific destination overrides.
+URL creation interface.
 
-### 4. Analytics and Tracking
-- Record link-click events.
-- Track timestamps and referrer information.
-- Collect basic browser and device information.
-- Provide analytics through dashboard and backend endpoints.
+Short-link management workspace.
 
-### 5. Additional Capabilities
-- QR code generation.
-- Bio-page functionality.
-- Domain blocklist.
-- Link creation rate limiting.
-- Responsive dashboard interface.
+Simplified link creation workflow.
 
-### Project Scope and Limitations
+2. Dashboard
 
-The project focuses on core link-management functionality. Advanced capabilities such as comprehensive geolocation analytics, team workspaces, background click processing, and production-grade bot detection are outside the current implementation scope.
+Centralized workspace.
 
----
+Overview of link-management activities.
 
-## 🛠️ Technology Stack
+Easy navigation between application sections.
 
-| Component | Technology |
-|---|---|
-| Frontend | HTML, CSS, JavaScript |
-| Backend | Node.js, Express.js |
-| Database | SQLite |
-| Authentication | JWT, bcryptjs |
-| QR Generation | QRCode |
-| Security | Helmet, Express Rate Limit |
-| Version Control | Git & GitHub |
+3. Link Management
 
----
+Dedicated links section.
 
-## 📂 Project Architecture
+Organized link-management interface.
 
-The application follows a frontend-backend architecture.
+Access to link creation tools.
 
-**Frontend:** Provides the user interface for creating, organizing, and monitoring links.
+4. Campaign Management
 
-**Backend:** Handles authentication, URL generation, redirect rules, analytics, and API requests.
+Dedicated campaign workspace.
 
-**Database:** Stores application records, user information, link configurations, and click events.
+Interface for organizing link-related campaigns.
 
-**Security Layer:** Implements authentication, password hashing, request limiting, and link-management restrictions.
+5. CSV Import
 
----
+CSV import section for bulk link-management workflows.
 
-## ⚙️ Installation and Local Setup
+6. Analytics
 
-### Prerequisites
+Analytics-focused dashboard design.
 
-Ensure the following are installed:
+Interface intended to support link-performance monitoring.
 
-- Node.js 20 or above
-- npm
-- Git
-- Visual Studio Code (recommended)
+Unique visitor estimates and link insights.
 
-### Step 1: Clone the Repository
+7. User Experience
 
-```bash
-git clone https://github.com/USERNAME/team-hld-linkpulse.git
-```
+Clean and modern interface.
 
-Replace `USERNAME` with the actual GitHub account name.
+Responsive web application design.
 
-### Step 2: Open the Project
+Guest explorer and demo workspace.
 
-```bash
-cd team-hld-linkpulse
-```
+Note: The live application includes a demo/preview experience. The presence of an interface does not independently establish that every associated backend workflow is fully operational.
 
-### Step 3: Install Dependencies
+🛠️ Technology & Platform
 
-```bash
-npm install
-```
+LinkPulse is delivered as a browser-based web application.
 
-### Step 4: Configure Environment Variables
+ComponentPurposeWeb FrontendApplication interfaceDashboardCentralized link managementAnalytics InterfaceLink-performance insightsCSV InterfaceBulk import workflowGit & GitHubVersion controlVercelWeb deployment
 
-Create a `.env` file using `.env.example` as a reference.
+The exact programming frameworks and database dependencies are documented in the project's source configuration.
 
-**Important:** The application does not automatically load `.env` files. Configure the required environment variables in your shell or deployment environment.
+⚙️ Getting Started
 
-PowerShell example:
+Access the Application
 
-```powershell
-$env:JWT_SECRET="replace-with-a-unique-random-secret-at-least-32-characters"
-npm start
-```
+Visit the deployed website:
 
-Never upload real credentials or secret keys to GitHub.
+https://lnkpulse-dev.vercel.app/
 
-### Step 5: Run the Application
+Explore the Dashboard
 
-After configuring the environment, start the application:
+Open the application and navigate through the available workspace sections.
 
-```bash
-npm start
-```
+Application Navigation
 
-Open your browser and visit:
+The interface provides access to:
 
-```text
-http://localhost:3000
-```
+Overview
 
----
+Links
 
-## 🚀 Deployment
+Campaigns
 
-The application requires a Node.js-compatible hosting environment.
+Create
 
-Because the backend uses SQLite, persistent storage is necessary to preserve application data across deployments and restarts.
+Import CSV
 
-GitHub Pages alone cannot host the Node.js backend.
+Some functionality may depend on the application's current demo mode and backend configuration.
 
-For production deployment, configure the required environment variables, provide persistent database storage, and verify all major application workflows.
+🏗️ Project Workflow
 
-The provided `render.yaml` illustrates a possible deployment configuration. Persistent hosting may require a paid plan or database migration depending on the selected provider.
+The intended LinkPulse workflow consists of the following stages:
 
----
+Access the LinkPulse workspace.
 
-## 🔒 Security Considerations
+Enter a destination URL.
 
-LinkPulse incorporates several security-focused mechanisms:
+Create a shortened link.
 
-- Password hashing using bcryptjs.
-- JWT-based authentication using HTTP-only cookies.
-- Request rate limiting.
-- Domain blocklisting.
-- Link disabling and expiration controls.
-- Owner-scoped link management.
+Manage links through the dashboard.
 
-These measures provide a foundation for safer link management. Additional security testing and infrastructure improvements would be necessary before large-scale production use.
+Organize links into campaigns.
 
----
+Monitor available link insights.
 
-## 🔮 Future Enhancements
+Use additional management tools as supported by the running application.
 
-The following improvements can be considered for future development:
+🎯 Project Objectives
 
-- Advanced geographical analytics.
-- Collaborative team workspaces.
-- Enhanced bot detection.
-- Background click-event processing.
-- Comprehensive automated URL safety scanning.
-- Improved analytics visualization.
-- Additional integration and customization options.
+The primary objectives of LinkPulse are:
 
----
+Simplify long URL management.
 
-## 🧪 Testing and Demonstration
+Provide a centralized link-management workspace.
 
-The core application workflow can be evaluated through the following sequence:
+Improve organization through campaign-based management.
 
-1. Register or log in.
-2. Create a shortened URL.
-3. Open the generated short link.
-4. Verify redirection to the destination.
-5. Review recorded click information.
-6. Generate a QR code.
-7. Disable the link.
-8. Verify that the disabled link no longer redirects.
+Support performance monitoring and analytics.
 
-Features should be demonstrated using the actual running application.
+Reduce complexity through an intuitive user interface.
 
----
+Build a scalable foundation for future enhancements.
 
-## 👥 Team Information
+🔮 Future Enhancements
 
-**Team Name:** Team HLD  
-**Project:** LinkPulse  
-**Category:** Web Development / Link Management
+Potential future improvements include:
 
-The project is developed as part of a hackathon initiative to demonstrate practical web-development skills, problem-solving, backend integration, and application design.
+Advanced geographical analytics.
 
----
+Collaborative team workspaces.
 
-## 🎯 Project Objective
+Enhanced URL safety scanning.
 
-Our goal is to develop a practical link-management solution that combines essential URL management features into one accessible platform.
+Improved bot detection.
 
-LinkPulse demonstrates how modern web technologies can be integrated to build an organized, functional, and extensible application.
+Advanced campaign reporting.
 
----
+Additional third-party integrations.
 
-**Developed by Team HLD**
+Expanded customization and automation options.
 
-*LinkPulse — Simplify Links. Track Performance. Manage Smarter.*
+👥 Team Information
+
+Team Name: Team HLD
+
+Project Name: LinkPulse
+
+Project Category: Web Application
+
+Submission Type: Hackathon Project
+
+This project represents our team's effort to develop a practical solution for modern URL management using web technologies and user-focused application design.
+
+🏁 Conclusion
+
+LinkPulse aims to go beyond basic URL shortening by providing a unified environment for managing links, organizing campaigns, and exploring performance insights.
+
+Through its centralized workspace and modern interface, the project demonstrates an approach to building a more efficient and accessible link-management experience.
+
+Developed by Team HLD
+
+LinkPulse — Shorten Smarter. Track Everything.
