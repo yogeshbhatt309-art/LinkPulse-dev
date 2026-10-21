@@ -1,8 +1,7 @@
 # Team HLD — LinkPulse
 
 **Repository:** `team-hld-linkpulse`  
-**Live URL:** _Add verified public deployment URL here before submission_  
-**Round 2 deadline:** 20 October 2026, 19:00 IST
+**Live URL:** https://lnkpulse-dev.vercel.app/  
 
 ## Problem statement
 A link-management platform must do more than map short codes to destinations. It should integrate link creation, redirect rules, click tracking, organization, analytics, QR codes, CSV import, and safety controls.
